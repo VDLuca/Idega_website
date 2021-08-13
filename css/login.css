@@ -1,0 +1,94 @@
+.box{
+    position: relative;
+    width: 50%;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 0 5 35px rgba(0, 0, 0, 0.2);
+}
+.box::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 5px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%),
+    rgba(255,255,255,0.1) 15%, transparent 50%, transparent 85%, rgba(255,255,255,0.3) 100%;
+}
+.box .form{
+    position: relative;
+    width: 100%;
+}
+.box .form h2{
+    color: #2b0000;
+	font-family: 'century-gothic';
+	font-size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+.box .form .inputbx{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.box .form .inputbx input::placeholder{
+    color: #2b0000;
+}
+.box .form .inputbx input[class="b-vinho"]{
+    background: #2b0000;
+	text-align: center;
+    color: #faf5ea;
+    width: 150px;
+    padding: 8px 10px;
+    box-shadow: inset none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.box .form .inputbx input[class="b-transparente"]{
+    text-align: center;
+    color: #2B0000;
+    width: 150px;
+    padding: 8px 10px;
+    box-shadow: inset none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+	border-color: #2B0000;
+	border-width: 1px;
+}
+.box .form .inputbx input{
+    width: 70%;
+    outline: none;
+    border: 1px solid rgba(43,0,0,1.00);
+    background: transparent;
+    padding: 8px 10px;
+    border-radius: 6px;
+    color: #2b0000;
+    font-size: 16px;
+    font-weight: 300;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+}
+.remember{
+    position: relative;
+	background-color: transparent;
+    display: inline-block;
+    color: #2b0000;
+    font-weight: 300;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.box .form p{
+    color:#000000;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.box .form a{
+    color: #2b0000;
+}

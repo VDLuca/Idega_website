@@ -1,0 +1,66 @@
+<html> <head>
+<title></title></head>
+<body>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+
+	
+<script>
+  // Your web app's Firebase configuration
+ var firebaseConfig = {
+    apiKey: "AIzaSyAa16Pfh0A4x2-El4BPV-GEPOnDProJrQk",
+    authDomain: "idega-wines.firebaseapp.com",
+    databaseURL: "https://idega-wines.firebaseio.com",
+    projectId: "idega-wines",
+    storageBucket: "idega-wines.appspot.com",
+    messagingSenderId: "631779209680",
+    appId: "1:631779209680:web:06d991d8b08160bf37c9d5",
+    measurementId: "G-6E6VS4HQGZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+function Dados(){
+ProdutoV = document.getElementById("produtot").value
+NomeV = document.getElementById("nomet").value
+QuantidadeV = parseInt(document.getElementById("quantidadet").value)
+EntradaV = parseInt(document.getElementById("entradat").value)
+SaidaV = parseInt(document.getElementById("saidat").value)
+}
+
+function Procurar()
+{ Dados(); 
+
+  firebase.database().ref("Estoque/"+ ProdutoV).on("value",function(snapshot){
+  
+   if (snapshot.val() == null ) alert("Não existe o produto");
+   document.getElementById("nomet").value = snapshot.val().nome;
+   document.getElementById("quantidadet").value = snapshot.val().quantidade;
+ 
+   });
+ }
+function Atualizar()
+{  Dados();
+   QuantidadeV = QuantidadeV + EntradaV - SaidaV ;
+           firebase.database().ref("Estoque/"+ ProdutoV).update({
+           quantidade: QuantidadeV,
+           });
+        };
+
+</script>
+
+PRODUTO: <input id="produtot" type="text"></input><br><br>
+NOME: <input id="nomet" type="text"></input><br><br>
+QUANTIDADE: <input id="quantidadet" type="text"></input><br><br>
+ENTRADA: <input id="entradat" type="text" value="0"></input><br><br>
+SAIDA: <input id="saidat" type="text" value="0"></input><br><br>
+
+<button onclick="Procurar();"> PROCURAR</button>
+<button onclick="Atualizar();"> ATUALIZAR</button>
+
+
+
+</body>
+
+</html>

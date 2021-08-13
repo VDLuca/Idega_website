@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: century-gothic;
+	src: url("../fonts/century-gothic.ttf")
+}
+.valuebox {
+    color: #faf5ea;
+    font-family: 'century-gothic';
+    height: 100;
+    width: 30;
+	background-color: beige ;
+	font-size: medium;
+	color: black;
+	border-radius: 8px;
+}
+.selection {
+	border-radius: 8px;
+   
+
+}
+	.cpfbox {
+	color: #faf5ea;
+    font-family: 'century-gothic';
+	height: 100;
+    width: 100;
+	background-color: beige ;
+	font-size: small;
+	color: black;
+	border-radius: 8px;
+}
+.caixa {
+    font-family: 'arial';
+	height: 100;
+    width: 18%;
+	background-color: #faf5ea;
+	font-size: small;
+	color: black;
+	border-radius: 7px;
+
+}
+ .b-transparente{
+    text-align: center;
+    color: #2B0000;
+    width: 150px;
+    padding: 8px 10px;
+    box-shadow: inset none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+	border-color: #2B0000;
+	border-width: 1px;
+}

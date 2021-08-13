@@ -1,0 +1,21 @@
+.inputbx select{
+    width: 35%;
+    outline: none;
+    border: 1px solid rgba(43,0,0,1.00);
+    background: transparent;
+    padding: 8px 10px;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+    border-radius: 6px;
+    color: #2b0000;
+    font-size: 16px;
+    font-weight: 300;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.box .form .inputbx input[class="n"]{
+    width: 8%;
+}
+.box .form .inputbx input[class="end"]{
+    width: 58%;
+}

@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: century-gothic;
+    src: url("../fonts/century-gothic.ttf")
+ }
+
+body {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #FFFFFF;
+}
+
+a{
+	color: #2b0000;
+	text-decoration: none
+}
+
+.body{
+	background-image: url("../images/home/banner.webp");
+	background-size: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat:
+}
+
+.header {
+	color: #faf5ea;
+	font-family: 'century-gothic';
+	padding-top: 1%;
+	height: 5%;
+	width: 100%;
+	background-color: rgba(250,245,234,0.25);
+	border-bottom: solid #2B0000;
+	border-bottom-color: #2B0000;
+
+}
+
+.menu {
+	color: #2b0000;
+	font-family: 'century-gothic';
+	font-size: 2.2vw;
+	height: 2.5%;
+	background-color: #faf5ea;
+}
+
+.div-logo {
+	padding-top: 0.5%;
+	padding-left: 2vw;
+}
+
+.logo {
+	max-width: 30vh;
+	min-width: 30vh;
+	width: 30vh
+}
+
+.icons {
+	height: 3vw;
+	width: auto;
+}
+
+.tab-icons {
+	text-align: right;
+	width: 2%
+}
+
+.space-table{
+	width: 10%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center
+}
+.title{
+	font-family: cinzel;     
+	src: url("../fonts/CinzelDecorative-Bold.otf");
+color: #2b0000;
+font-size: xx-large;
+	
+}
+.title2{
+	font-family: cinzel;     
+	src: url("../fonts/Cinzel-Regular.otf");
+	color:#2e0000;
+	font-size: large;
+}

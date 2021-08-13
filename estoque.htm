@@ -1,0 +1,68 @@
+<html> <head>
+<title></title></head>
+<body>
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+<script>
+  // Your web app's Firebase configuration
+   var firebaseConfig = {
+    apiKey: "AIzaSyAa16Pfh0A4x2-El4BPV-GEPOnDProJrQk",
+    authDomain: "idega-wines.firebaseapp.com",
+    databaseURL: "https://idega-wines.firebaseio.com",
+    projectId: "idega-wines",
+    storageBucket: "idega-wines.appspot.com",
+    messagingSenderId: "631779209680",
+    appId: "1:631779209680:web:06d991d8b08160bf37c9d5",
+    measurementId: "G-6E6VS4HQGZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+function Dados(){
+ProdutoV = document.getElementById("produtot").value
+NomeV = document.getElementById("nomet").value
+QuantidadeV = document.getElementById("quantidadet").value
+}
+function Inserir()
+{ Dados();
+ firebase.database().ref("Estoque/"+ ProdutoV).set({
+ nome: NomeV,
+ quantidade: QuantidadeV,
+
+ });
+}
+function Procurar()
+{ Dados();
+  firebase.database().ref("Estoque/"+ ProdutoV).on("value",function(snapshot){
+   document.getElementById("nomet").value = snapshot.val().nome;
+   document.getElementById("quantidadet").value = snapshot.val().quantidade;
+   });
+ }
+function Atualizar()
+{ Dados();
+ firebase.database().ref("Estoque/"+ ProdutoV).update({
+ nome: NomeV,
+ quantidade: QuantidadeV,
+});
+}
+function Deletar()
+{ Dados();
+ firebase.database().ref("Estoque/"+ ProdutoV).remove();
+}
+</script>
+
+PRODUTO: <input id="produtot" type="text"></input><br><br>
+NOME: <input id="nomet" type="text"></input><br><br>
+QUANTIDADE: <input id="quantidadet" type="text"></input><br><br>
+
+
+<button onclick="Inserir();"> INSERIR</button>
+<button onclick="Procurar();"> PROCURAR</button>
+<button onclick="Atualizar();"> ATUALIZAR</button>
+<button onclick="Deletar();"> DELETAR</button><br><br>
+
+
+</body>
+
+</html>

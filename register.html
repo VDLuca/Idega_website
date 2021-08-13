@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/register.css">
+	<link rel="stylesheet" href="fonts/century-gothic.ttf">
+<title>iDega - Seu delivery de vinho.</title>
+</head>
+<body class="body">
+	
+	<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+		 <center>
+	<div class="header">
+<center><a href="index.html"><img class="logo" src="images/home/iDega logo vinho.webp" alt=""/></a></center>
+</div>
+	</center>
+<center>
+        <div class="box" >
+            <div class="form">
+                <h2>Cadastro</h2>
+                    <div class="inputbx2">
+                        <input id="name" type="text" placeholder="Nome Completo">
+                    </div>
+                    <div class="inputbx2">
+                        <input id="email" type="email" placeholder="Email">
+                    </div>
+					<div class="inputbx">
+                        <input id="cpf" type="text" maxlength="11" placeholder="CPF" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+						<input id="phone" type="text" maxlength="11" placeholder="Telefone" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+					<div class="inputbx">
+					</div>
+          </div>
+        </div>
+	</center>
+	<center>
+        <div class="box" >
+            <div class="form">
+                <h2>Endereço</h2>
+                    <div class="inputbx">
+                        <input id="address" class="end" type="text" placeholder="Endereço">
+						<input id="number" class="n" type="text" placeholder="Nº"  onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+
+					<div class="inputbx">
+                        <input id="complement" type="text" placeholder="Complemento">
+						<input id="reference" type="text" placeholder="Referência">
+                    </div>
+                    <div class="inputbx">
+                        <input id="district" type="text" placeholder="Bairro">
+						<input id="city" type="text" placeholder="Cidade">
+                    </div>
+                    <div class="inputbx">
+                        <select id="state" name="estado">
+                            <option selected="" value="">Selecione o Estado</option>
+                            <option value="Acre">Acre</option>
+                            <option value="Alagoas">Alagoas</option>
+                            <option value="Amapá">Amapá</option>
+                            <option value="Amazonas">Amazonas</option>
+                            <option value="Bahia">Bahia</option>
+                            <option value="Ceará">Ceará</option>
+                            <option value="Distrito Federal">Distrito Federal</option>
+                            <option value="Espírito Santo">Espírito Santo</option>
+                            <option value="Goiás">Goiás</option>
+                            <option value="Maranhão">Maranhão</option>
+                            <option value="Mato Grosso">Mato Grosso</option>
+                            <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                            <option value="Minas Gerais">Minas Gerais</option>
+                            <option value="Pará">Pará</option>
+                            <option value="Paraíba">Paraíba</option>
+                            <option value="Paraná">Paraná</option>
+                            <option value="Pernambuco">Pernambuco</option>
+                            <option value="Piauí">Piauí</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                            <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                            <option value="Rondônia">Rondônia</option>
+                            <option value="Roraima">Roraima</option>
+                            <option value="Santa Catarina">Santa Catarina</option>
+                            <option value="São Paulo">São Paulo</option>
+                            <option value="Sergipe">Sergipe</option>
+                            <option value="Tocantins">Tocantins</option>
+                            </select>
+                        <input id="zipcode" type="text" placeholder="CEP"  onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+                    <div class="inputbx">
+						<div class="inputbx"> 
+						<br>
+                        <input type="submit" class="b-vinho" value="Criar Cadastro" onClick="Dados();" >
+						<br>
+						<br>
+						<input type="submit" class="b-transparente" value="Ir ao Carrinho">
+                    </div>
+                    </div>
+          </div>
+        </div>
+	</center>
+	<script src="js/register.js" type="text/javascript" language="javascript"></script>
+</body>
+</html>
